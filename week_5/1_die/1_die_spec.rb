@@ -1,4 +1,19 @@
-require_relative 'my_solution'
+class Die
+  def initialize(sides)
+    @sides = sides
+    if sides < 1
+      raise ArgumentError
+    end
+  end
+
+  def sides
+    puts sides
+  end
+
+  def roll
+    puts rand(@sides)
+  end
+end
 
 describe Die do
   describe '#initialize' do
