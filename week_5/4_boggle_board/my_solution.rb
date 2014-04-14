@@ -28,7 +28,7 @@ def create_word(board, *coords)
 end
 
   puts create_word(boggle_board, [2,1], [1,1], [1,2], [0,3])  #=> returns "code" 
-  puts create_word(boggle_board, [0,1], [0,2], [1,2])  #=> creates what california slang word?
+  puts create_word(boggle_board, [0,1], [0,2], [1,2])  #=> returns "rad"
 =end
 
 # Refactored Solution
@@ -51,7 +51,7 @@ boggle_board = Boggle.new([["b", "r", "a", "e"],
   puts boggle_board.create_word([0,1], [0,2], [1,2])  == "rad"
 
 # Reflection 
-
+# => Reflection for entire exercise listed below.
 #-------------------------------------------------------------------------------
 
 # Part 2: Write a method that takes a row number and returns all the elements in the row.  
@@ -79,7 +79,7 @@ end
 
 
 # Refactored Solution
-
+# => Reflection for entire exercise listed below.
 
 # DRIVER TESTS GO BELOW THIS LINE
 puts boggle_board.get_row(1) ==  ["i", "o", "d", "t"]
@@ -107,8 +107,6 @@ puts boggle_board.get_row(1).class == Array
         # Join elements in column array
         # RETURN joined elements of column array
     # END method, close class Boggle
-    
-    # 
 
 # Initial Solution
 class Boggle
@@ -122,10 +120,14 @@ end
 
 
 # Refactored Solution
-
+# Initial solution seems relatively DRY, so I'm happy with it.
 
 # DRIVER TESTS GO BELOW THIS LINE
 puts boggle_board.get_col(1) == ["r", "o", "c", "a"]
 puts boggle_board.get_col(3) == ["e", "t", "r", "e"]
 
 # Reflection 
+# => Catherine and I worked on this challenge together and enjoyed it. We tested Part 1 to see exactly what it was doing and were particularly interested in the splat operator.
+# => We had seen it before, but through this exercise we were able to understand it better (it takes an undefined number on inputs and converts them to an array).
+# => It was also great practice with using instance variables and I definitely understand them much better now.
+# => I especially liked that we were able to come up with a solution for Part 3 quickly as it's a challenge that demands comprehension of various concepts. It was heartening to know that it is becoming more intuitive.
